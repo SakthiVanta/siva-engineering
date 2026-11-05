@@ -1,0 +1,536 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* ------------------------------------------------------------------
+   Tokens — sampled from the logo: charcoal gear + brushed-silver wordmark.
+   Light is the default; dark swaps to silver-on-graphite.
+------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --paper: #f5f5f3;
+  --paper-2: #ecece9;
+  --surface: #ffffff;
+  --ink: #1b1b1d;
+  --ink-2: #4b4b50;
+  --mute: #686870;
+  --line: rgba(27, 27, 29, 0.12);
+  --line-strong: rgba(27, 27, 29, 0.32);
+  --silver: #c6c6ca;
+  --aura-1: rgba(37, 99, 235, 0.22);
+  --aura-2: rgba(150, 158, 190, 0.38);
+  --aura-3: rgba(99, 102, 241, 0.12);
+  --accent: #1d4ed8;
+  --accent-hover: #1a43bd;
+  --accent-ink: #ffffff;
+  --font-display: var(--font-body);
+  --gutter: clamp(20px, 5vw, 88px);
+  --maxw: 1760px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0e0e10;
+  --paper-2: #141417;
+  --surface: #18181b;
+  --ink: #ececef;
+  --ink-2: #b5b5bb;
+  --mute: #8e8e96;
+  --line: rgba(236, 236, 239, 0.12);
+  --line-strong: rgba(236, 236, 239, 0.34);
+  --silver: #8a8a92;
+  --aura-1: rgba(47, 102, 242, 0.34);
+  --aura-2: rgba(130, 140, 200, 0.16);
+  --aura-3: rgba(120, 90, 255, 0.16);
+  --accent: #2f66f2;
+  --accent-hover: #4a7bff;
+  --accent-ink: #ffffff;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-mute: var(--mute);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-silver: var(--silver);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ------------------------------------------------------------------ base */
+@layer base {
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-feature-settings: "cv11", "ss03";
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+[id] {
+  scroll-margin-top: 88px;
+}
+
+}
+
+/* Component classes live in the components layer so Tailwind utilities (hidden, md:flex, !min-h-*) can override them. */
+@layer components {
+/* ------------------------------------------------------------ layout */
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--maxw));
+  margin-inline: auto;
+}
+.section {
+  padding-block: clamp(72px, 11vw, 144px);
+  position: relative;
+}
+.section-tight {
+  padding-block: clamp(48px, 7vw, 88px);
+}
+.rule {
+  border-top: 1px solid var(--line);
+}
+.rule-b {
+  border-bottom: 1px solid var(--line);
+}
+
+/* ------------------------------------------------------------ type */
+.eyebrow {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.display {
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+  line-height: 1.03;
+  letter-spacing: -0.045em;
+  font-size: clamp(2.5rem, 1rem + 5.6vw, 5.75rem);
+  text-wrap: balance;
+}
+/* one accent word per heading: blue -> silver gradient */
+.display em,
+.h2 em {
+  font-style: normal;
+  background: linear-gradient(100deg, var(--accent) 10%, #7ea2ff 60%, var(--silver) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.h2 {
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.038em;
+  font-size: clamp(1.9rem, 1.05rem + 3.1vw, 3.5rem);
+  text-wrap: balance;
+}
+.h3 {
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.028em;
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.7rem);
+}
+.lead {
+  color: var(--ink-2);
+  font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 40rem;
+  text-wrap: pretty;
+}
+.prose p {
+  color: var(--ink-2);
+  max-width: 42rem;
+  text-wrap: pretty;
+}
+.prose p + p {
+  margin-top: 1em;
+}
+.prose a,
+.u-link {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  transition: background-size 0.3s ease;
+}
+.prose a:hover,
+.u-link:hover {
+  background-size: 0 1px;
+  background-position: 100% 100%;
+}
+.font-serif {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.mono {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------------------------------------------- buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  padding: 0 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.btn-ghost {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+.btn-ghost:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-wa {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.btn-wa:hover {
+  background: var(--accent-hover);
+}
+.btn svg {
+  flex: none;
+}
+.arrow {
+  transition: transform 0.25s ease;
+}
+a:hover > .arrow,
+button:hover > .arrow,
+.group:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------------------------------------------------------- frames */
+.frame {
+  position: relative;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 78%, transparent);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+.ticks::before,
+.ticks::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  pointer-events: none;
+  border: 0 solid var(--ink);
+  opacity: 0.55;
+}
+.ticks::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+.ticks::after {
+  right: -1px;
+  bottom: -1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+/* list rows: a ruled, numbered index */
+.row {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--line);
+  transition: padding-left 0.3s ease, background-color 0.3s ease;
+}
+.row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+@media (hover: hover) {
+  .row:hover {
+    padding-left: 0.75rem;
+  }
+}
+
+/* photos: quiet monochrome at rest, colour on hover (hover devices only) */
+.photo {
+  position: relative;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+.photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (hover: hover) {
+  .photo img {
+    filter: grayscale(0.85) contrast(1.03);
+    transition: filter 0.6s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  a:hover .photo img,
+  .photo:hover img {
+    filter: none;
+    transform: scale(1.025);
+  }
+}
+
+/* ---------------------------------------------------------- forms */
+.field {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.7rem 0;
+  background: transparent;
+  color: var(--ink);
+  border: 0;
+  border-bottom: 1px solid var(--line-strong);
+  border-radius: 0;
+  font: inherit;
+  font-size: 1rem; /* >=16px stops iOS zoom */
+  transition: border-color 0.2s ease;
+}
+.field::placeholder {
+  color: var(--mute);
+  opacity: 0.8;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+select.field {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--mute) 50%), linear-gradient(135deg, var(--mute) 50%, transparent 50%);
+  background-position: calc(100% - 12px) 55%, calc(100% - 7px) 55%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 1.5rem;
+}
+select.field option {
+  background: var(--surface);
+  color: var(--ink);
+}
+textarea.field {
+  min-height: 96px;
+  resize: vertical;
+}
+.label {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+}
+
+/* ------------------------------------------------------------------ aura
+   Soft, slow-drifting light behind key sections. Pure CSS gradients (no blur
+   filters, no JS): only transform animates, so it stays on the compositor. */
+.aura {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+.aura::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  background: linear-gradient(180deg, transparent, var(--paper));
+}
+.aura i {
+  position: absolute;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  will-change: transform;
+  animation: drift 22s ease-in-out infinite;
+}
+.aura .a1 {
+  width: min(78vw, 1100px);
+  right: -14%;
+  top: -22%;
+  background: radial-gradient(closest-side, var(--aura-1), transparent 72%);
+}
+.aura .a2 {
+  width: min(64vw, 900px);
+  left: -20%;
+  bottom: -36%;
+  background: radial-gradient(closest-side, var(--aura-2), transparent 72%);
+  animation-duration: 28s;
+  animation-direction: reverse;
+}
+.aura .a3 {
+  width: min(40vw, 560px);
+  left: 38%;
+  top: 8%;
+  background: radial-gradient(closest-side, var(--aura-3), transparent 72%);
+  animation-duration: 34s;
+}
+.aura[data-soft] i {
+  opacity: 0.55;
+}
+.aura[data-soft] .a3 {
+  display: none;
+}
+@keyframes drift {
+  50% {
+    transform: translate3d(-3%, 4%, 0) scale(1.07);
+  }
+}
+
+/* ---------------------------------------------------------- motion */
+/* Hero entrance is pure CSS so it never waits on JavaScript (keeps LCP fast). */
+@keyframes rise {
+  from {
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade 1.2s ease both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* Scroll reveals: hidden only while the motion layer is alive (see layout script). CSS-only transitions. */
+html.motion [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--rd, 0ms), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--rd, 0ms);
+}
+html.motion [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+html.motion [data-split]:not(.is-split) {
+  visibility: hidden;
+}
+
+/* Marquee */
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
+.fade-edges {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .marquee,
+  .aura i {
+    animation: none;
+  }
+  html.motion [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Leave room for the mobile action bar */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+  }
+}
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,269 @@
+[
+ {
+  "key": "default",
+  "eyebrow": "Gear job work · Irugur, Coimbatore",
+  "title": "Gear cutting, engineered in Coimbatore.",
+  "sub": "Hobbing up to Ø1250 mm · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "services",
+  "eyebrow": "Services",
+  "title": "Everything a gear needs, in one shop.",
+  "sub": "Six job-work processes under one roof in Coimbatore"
+ },
+ {
+  "key": "machines",
+  "eyebrow": "Machines",
+  "title": "Nine machines, all in one shop.",
+  "sub": "Hobbers, gear shaper, slotters, 10-ton broach, cutter grinder"
+ },
+ {
+  "key": "capacity-checker",
+  "eyebrow": "Capacity checker",
+  "title": "Will your gear fit our machines?",
+  "sub": "Instant check: hobbing Ø25–1250 mm, face up to 500 mm"
+ },
+ {
+  "key": "gear-playground",
+  "eyebrow": "3D gear playground",
+  "title": "Design a gear. See it in 3D.",
+  "sub": "Teeth, module, pitch diameter — then send the spec for a quote"
+ },
+ {
+  "key": "best-gear-job-work-company-coimbatore",
+  "eyebrow": "Buyer's guide",
+  "title": "Best gear job work company in Coimbatore: how to choose.",
+  "sub": "What to check before you send your drawing"
+ },
+ {
+  "key": "gear-job-work-coimbatore",
+  "eyebrow": "Coimbatore",
+  "title": "Gear job work in Coimbatore.",
+  "sub": "Hobbing, shaping, slotting, broaching, cutter grinding"
+ },
+ {
+  "key": "contact",
+  "eyebrow": "Contact",
+  "title": "Send us your drawing.",
+  "sub": "WhatsApp or call for a quick quote"
+ },
+ {
+  "key": "about",
+  "eyebrow": "About",
+  "title": "A machine shop built around gears.",
+  "sub": "Siva Engineering · Irugur, Coimbatore"
+ },
+ {
+  "key": "clients",
+  "eyebrow": "Clients",
+  "title": "Companies that trust us with their gears.",
+  "sub": "Gear makers and engineering firms around Coimbatore"
+ },
+ {
+  "key": "guides",
+  "eyebrow": "Guides",
+  "title": "Straight answers for buyers and engineers.",
+  "sub": "Hobbing vs shaping · Slotting vs broaching · Hob regrinding"
+ },
+ {
+  "key": "faq",
+  "eyebrow": "FAQ",
+  "title": "Questions, answered plainly.",
+  "sub": "Capacity, blanks, quotes and contact"
+ },
+ {
+  "key": "process",
+  "eyebrow": "How it works",
+  "title": "From drawing to dispatch, in four steps.",
+  "sub": "The simplest way to get gear job work done"
+ },
+ {
+  "key": "gallery",
+  "eyebrow": "Shop floor",
+  "title": "This is where your gears are made.",
+  "sub": "Real machines on our Irugur shop floor"
+ },
+ {
+  "key": "testimonials",
+  "eyebrow": "Customer feedback",
+  "title": "Your feedback shapes how we work.",
+  "sub": "Share how your job went"
+ },
+ {
+  "key": "services-gear-hobbing",
+  "eyebrow": "Service 01",
+  "title": "Gear hobbing job work in Coimbatore",
+  "sub": "Spur and helical gears from Ø25 mm to Ø1250 mm on four hobbing machines."
+ },
+ {
+  "key": "services-gear-shaping",
+  "eyebrow": "Service 02",
+  "title": "Gear shaping job work in Coimbatore",
+  "sub": "Internal gears, cluster gears and close-shoulder work on a Liebherr shaper."
+ },
+ {
+  "key": "services-keyway-slotting",
+  "eyebrow": "Service 03",
+  "title": "Keyway slotting job work in Coimbatore",
+  "sub": "Keyways from 5 mm to 20 mm cut on two vertical slotting machines."
+ },
+ {
+  "key": "services-broaching",
+  "eyebrow": "Service 04",
+  "title": "Broaching job work in Coimbatore",
+  "sub": "10-ton broaching for repeatable keyways and splines in batches."
+ },
+ {
+  "key": "services-hob-cutter-grinding",
+  "eyebrow": "Service 05",
+  "title": "Hob cutter grinding in Coimbatore",
+  "sub": "Regrinding of hobbing cutters so they cut clean teeth again."
+ },
+ {
+  "key": "services-tool-cutter-grinding",
+  "eyebrow": "Service 06",
+  "title": "Tool and cutter grinding in Coimbatore",
+  "sub": "Resharpening of slotting tools, form tools and other cutters."
+ },
+ {
+  "key": "machines-wmw-hobbing-1250",
+  "eyebrow": "hobbing · Large-diameter gears",
+  "title": "WMW Hobbing Machine 1250",
+  "sub": "Our largest hobber — gear blanks from Ø200 mm up to Ø1250 mm with a 500 mm face.",
+  "photo": "/machines/wmw-hobbing-1250.webp"
+ },
+ {
+  "key": "machines-wmw-hobbing-250",
+  "eyebrow": "hobbing · Small and medium gears",
+  "title": "WMW Hobbing Machine 250",
+  "sub": "The everyday hobber for pinions and wheels from Ø25 mm to Ø250 mm.",
+  "photo": "/machines/wmw-hobbing-250.webp"
+ },
+ {
+  "key": "machines-hmt-liebherr-400-hobbing",
+  "eyebrow": "hobbing · Mid-size hobbing",
+  "title": "HMT Liebherr 400 Hobbing Machine",
+  "sub": "A third hobbing line that keeps mid-size work moving when the others are busy.",
+  "photo": "/machines/hmt-liebherr-400-hobbing.webp"
+ },
+ {
+  "key": "machines-cooper-hobbing-250",
+  "eyebrow": "hobbing · Batch hobbing",
+  "title": "Cooper Hobbing Machine 250",
+  "sub": "A fourth hobber for batch work and for running jobs in parallel.",
+  "photo": "/machines/cooper-hobbing-250.webp"
+ },
+ {
+  "key": "machines-liebherr-gear-shaper",
+  "eyebrow": "shaping · Internal gears & clusters",
+  "title": "Liebherr Gear Shaper",
+  "sub": "For internal gears and gears a hob cannot reach — Ø20 to Ø200 mm, 40 mm face.",
+  "photo": "/machines/liebherr-gear-shaper.webp"
+ },
+ {
+  "key": "machines-slotting-machine-1",
+  "eyebrow": "slotting · Keyways 5–20 mm",
+  "title": "Slotting Machine 1",
+  "sub": "Vertical slotter for keyways from 5 mm to 20 mm.",
+  "photo": "/machines/slotting-machine-1.webp"
+ },
+ {
+  "key": "machines-slotting-machine-2",
+  "eyebrow": "slotting · Second slotting cell",
+  "title": "Slotting Machine 2",
+  "sub": "A second slotter so urgent keyways do not queue behind longer jobs.",
+  "photo": "/machines/slotting-machine-2.webp"
+ },
+ {
+  "key": "machines-broaching-machine-10-ton",
+  "eyebrow": "broaching · 10-ton broach",
+  "title": "Broaching Machine, 10 Ton",
+  "sub": "10-ton broaching for fast, repeatable keyways and splines in batches.",
+  "photo": "/machines/broaching-machine-10-ton.webp"
+ },
+ {
+  "key": "machines-tool-cutter-grinder",
+  "eyebrow": "grinding · Hob & tool regrinding",
+  "title": "Tool & Cutter Grinder",
+  "sub": "Regrinds hob cutters and cutting tools so they cut like new again.",
+  "photo": "/machines/tool-cutter-grinder.webp"
+ },
+ {
+  "key": "guides-gear-hobbing-vs-gear-shaping",
+  "eyebrow": "Guide · 4 min read",
+  "title": "Gear hobbing vs gear shaping: which should you choose?",
+  "sub": "Hobbing and shaping both cut gear teeth, but they suit different parts. A plain-language guide to choosing between them."
+ },
+ {
+  "key": "guides-keyway-slotting-vs-broaching",
+  "eyebrow": "Guide · 3 min read",
+  "title": "Keyway slotting vs broaching: cost, speed and when to use each",
+  "sub": "Slotting and broaching both cut keyways. Slotting is flexible; broaching is fast for batches. Here is how to choose."
+ },
+ {
+  "key": "guides-how-to-prepare-a-gear-job-work-enquiry",
+  "eyebrow": "Guide · 3 min read",
+  "title": "How to prepare a gear job work enquiry (and get a quote faster)",
+  "sub": "The information a machine shop needs to quote gear cutting accurately: module, teeth, pressure angle, face width, material and more."
+ },
+ {
+  "key": "guides-when-to-regrind-hob-cutters",
+  "eyebrow": "Guide · 3 min read",
+  "title": "When to regrind a hob cutter: five signs it is time",
+  "sub": "A dull hob quietly damages gear quality. These five signs tell you when to send your hob cutter for regrinding."
+ },
+ {
+  "key": "locations-irugur",
+  "eyebrow": "Irugur, Coimbatore",
+  "title": "Gear job work in Irugur.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-ondipudur",
+  "eyebrow": "Ondipudur, Coimbatore",
+  "title": "Gear job work in Ondipudur.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-singanallur",
+  "eyebrow": "Singanallur, Coimbatore",
+  "title": "Gear job work in Singanallur.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-peelamedu",
+  "eyebrow": "Peelamedu, Coimbatore",
+  "title": "Gear job work in Peelamedu.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-sulur",
+  "eyebrow": "Sulur, Coimbatore",
+  "title": "Gear job work in Sulur.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-kurichi",
+  "eyebrow": "Kurichi, Coimbatore",
+  "title": "Gear job work in Kurichi.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-kuniyamuthur",
+  "eyebrow": "Kuniyamuthur, Coimbatore",
+  "title": "Gear job work in Kuniyamuthur.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "locations-saravanampatti",
+  "eyebrow": "Saravanampatti, Coimbatore",
+  "title": "Gear job work in Saravanampatti.",
+  "sub": "Hobbing · Shaping · Slotting · Broaching · Cutter grinding"
+ },
+ {
+  "key": "gear-job-work-irugur",
+  "eyebrow": "Irugur, Coimbatore",
+  "title": "Best gear job work in Irugur, Coimbatore.",
+  "sub": "Shop-floor machines, clear quotes, WhatsApp-first"
+ }
+]
